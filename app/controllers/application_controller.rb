@@ -13,9 +13,13 @@ class ApplicationController < ActionController::Base
 private
 
   def authenticate_user
-    unless current_user
+    unless token_valid?
       session[:redirect_path] = request.original_fullpath
       redirect_to '/auth/mojsso'
     end
+  end
+
+  def token_valid?
+    session[:sso_token] && session[:sso_token_expires_at] > Time.now.to_i
   end
 end

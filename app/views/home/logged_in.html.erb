@@ -1,8 +1,8 @@
-<p>User details retrieved from SSO</p>
+<p>Session with details acquired from SSO:</p>
 
-<p>Signon user_id: <%= session['sso_id'] %></p>
+<%= ap(session).html_safe %>
 
-<p>Details: <code><%= current_user.inspect %></code></p>
+<p>Token expires in <%= session[:sso_token_expires_at] - Time.now.to_i %> seconds.</p>
 
 <p><%= link_to 'logout', '/logout' %></p>
 

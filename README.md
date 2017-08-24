@@ -3,10 +3,9 @@ A demonstration integration with [Ministry of Justice Sign On](https://github.co
 This demo
 
 * uses the `omniauth-oauth2` gem to handle the OAuth flows
-* stores the user's id and info in the session
+* stores the user's id, info and SSO token details in the session
 * implements the optional logout redirection back to this app
-
-See [this commit](https://github.com/ministryofjustice/moj-sso-demo/commit/1074aceac6f63220f844f61873aa366ce9abaf2a) for pertinent details.
+* forces re-authentication when the SSO token expires
 
 ## Usage instructions
 
