@@ -49,3 +49,4 @@ group :production do
 end
 
 gem 'omniauth-oauth2', '1.3.1'
+gem 'awesome_print'
