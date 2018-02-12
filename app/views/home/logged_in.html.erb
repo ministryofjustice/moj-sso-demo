@@ -7,3 +7,6 @@
 <p><%= link_to 'logout', '/logout' %></p>
 
 <p><%= link_to 'SSO profile', current_user['links']['profile'] %></p>
+
+<p><%= link_to 'Emulate invalid auth token', '/emulate_invalid_auth_token' %>
+This will raise an ActionController::InvalidAuthenticityToken exception</p>

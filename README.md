@@ -5,7 +5,7 @@ This demo
 * uses the `omniauth-oauth2` gem to handle the OAuth flows
 * stores the user's id, info and SSO token details in the session
 * implements the optional logout redirection back to this app
-* forces re-authentication when the SSO token expires
+* forces re-authentication when the SSO token expires or an invalid auth token is detected
 
 ## Usage instructions
 
